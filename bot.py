@@ -6,6 +6,10 @@ import pprint
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+    return "Bot would respond to post requests!"
+
 @app.route('/', methods=['POST'])
 def on_event():
   """Handles an event from Hangouts Chat."""
@@ -21,4 +25,4 @@ def on_event():
   return json.jsonify({'text': text})
 
 if __name__ == '__main__':
-  app.run(port=8080, debug=True)
+  app.run(debug=True)
