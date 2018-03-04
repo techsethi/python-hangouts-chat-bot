@@ -1,2 +1,0 @@
-# Renamed ProcFile to Procfile
-web: gunicorn bot:app --log-file=-
